@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="أحمد المعمري، مدير التسويق الرقمي في مستشفى تداوي العام بالدمام. Ahmed Almaamari, Digital Marketing Manager.">
+<meta property="og:title" content="أحمد المعمري | Ahmed Almaamari">
+<meta property="og:description" content="مدير التسويق الرقمي · التسويق الصحي · الدمام">
+<meta property="og:image" content="https://hmodezx.github.io/ahmed.webp">
+<title>أحمد المعمري</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@600;700;800&display=swap">
+<style>
+/* Layout: a clear, light résumé page. Name first, then numbers, summary, achievements, expertise, experience, education, contact. One light look by design. */
+:root{
+  --page:#f5f7f9; --card:#ffffff; --ink:#14233a; --text:#2c3b50; --muted:#617086; --line:#e1e7ee;
+  --accent:#0d7560; --accent-soft:#e3f2ee; --accent-ink:#ffffff; --navy:#16325c; --track:#e6ecf1;
+  --head:"Noto Kufi Arabic","IBM Plex Sans Arabic",system-ui,sans-serif;
+  --body:"IBM Plex Sans Arabic",system-ui,sans-serif;
+  color-scheme:light;
+}
+body{background:var(--page);color:var(--text);font:400 17px/1.85 var(--body);padding-inline:16px;padding-block:0 40px}
+.page[data-lang="ar"] .en,.page[data-lang="en"] .ar{display:none}
+.wrap{max-width:1040px;margin-inline:auto}
+.num{font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+h1,h2,h3{margin:0;color:var(--ink);text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgb(255 255 255 / .92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-inline:-16px;padding-inline:16px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.logo{font:700 17px/1 var(--head);color:var(--ink);text-decoration:none}
+.nav{display:flex;gap:22px;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--accent)}
+.lang{font:600 14px/1 var(--body);background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:9px 14px;cursor:pointer}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr);gap:clamp(24px,5vw,56px);align-items:center;padding-block:clamp(32px,6vw,64px)}
+.role-tag{display:inline-block;font-size:14px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:99px;padding:4px 14px}
+.hero h1{font:800 clamp(36px,6vw,58px)/1.25 var(--head);margin-block:14px 6px}
+.hero-job{font-size:clamp(17px,2.2vw,20px);font-weight:600;color:var(--navy)}
+.hero .lead{margin-top:16px;font-size:clamp(17px,2vw,19px);max-width:36em}
+.facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:15px;color:var(--muted)}
+.facts span{display:inline-flex;align-items:center;gap:6px}
+.facts svg{width:18px;height:18px;color:var(--accent)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:10px;font:600 15px/1.2 var(--body);text-decoration:none;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.btn-solid{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{border-color:var(--accent)}
+
+.portrait{position:relative;aspect-ratio:1/1;max-width:100%;margin:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px -18px rgb(20 35 58 / .25)}
+.portrait .card{position:absolute;inset:0;background:linear-gradient(170deg,#eef3f7 0%,#dcebe6 100%)}
+.portrait .cut{position:absolute;inset:0}
+.portrait img{position:absolute;inset-inline:0;bottom:0;width:100%;height:96%;object-fit:contain;object-position:bottom}
+
+/* numbers */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi .v{font:700 clamp(28px,3.6vw,36px)/1.2 var(--body);color:var(--accent)}
+.kpi .l{font-size:15px;font-weight:600;color:var(--ink)}
+.kpi .d{font-size:13px;color:var(--muted)}
+
+/* sections */
+.sec{padding-block:clamp(48px,7vw,72px) 0}
+.sec-head{margin-bottom:22px;display:flex;flex-direction:column;gap:6px}
+.sec-head h2{font:700 clamp(24px,3.2vw,30px)/1.4 var(--head);display:flex;align-items:center;gap:12px}
+.sec-head h2::before{content:"";width:6px;height:26px;border-radius:3px;background:var(--accent);flex:none}
+.sec-head p{color:var(--muted);font-size:16px;max-width:52ch}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:clamp(20px,3vw,28px)}
+.about{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:24px}
+.about p + p{margin-top:12px}
+.focus h3{font-size:15px;color:var(--muted);font-weight:600;margin-bottom:10px}
+.focus ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.focus li{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--ink);font-size:16px}
+.focus li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+
+/* achievements */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.case{background:var(--card);border:1px solid var(--line);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.case-hd{padding:20px 20px 6px;display:flex;flex-direction:column;gap:6px}
+.case-tag{font-size:13px;font-weight:600;color:var(--accent)}
+.case h3{font:700 18px/1.55 var(--body)}
+.fig{padding:6px 20px 18px;display:flex;flex-direction:column;gap:12px}
+.fig .big{font:700 42px/1.1 var(--body);color:var(--accent)}
+.steps{border-top:1px solid var(--line);margin-top:auto;padding:16px 20px 20px;display:grid;gap:12px}
+.step{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 10px}
+.step i{grid-row:span 2;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font:700 13px/1 var(--body);font-style:normal;background:var(--track);color:var(--muted)}
+.step.res i{background:var(--accent);color:#fff}
+.step b{font-size:13px;color:var(--muted);font-weight:600}
+.step p{font-size:15px;line-height:1.75;color:var(--text)}
+.step p strong{color:var(--accent)}
+.bars{display:grid;gap:8px;font-size:13px;color:var(--muted)}
+.bar-row{display:grid;grid-template-columns:52px minmax(0,1fr) 52px;gap:10px;align-items:center}
+.bar{height:12px;background:var(--track);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:var(--w);background:#9fd3c4;border-radius:99px}
+.bar-row.now .bar i{background:var(--accent)}
+.bar-row .num{color:var(--ink);font-weight:600;text-align:end}
+.scale{position:relative;height:48px;direction:ltr;margin-inline:12px}
+.scale .ln{position:absolute;left:0;right:0;top:16px;height:3px;background:var(--track);border-radius:2px}
+.scale .seg{position:absolute;top:16px;height:3px;left:20%;width:40%;background:var(--accent)}
+.scale .pt{position:absolute;top:17px;left:var(--x);width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%)}
+.scale .pt.b{background:#fff;border:2px solid #9aa8b8}
+.scale .pt.a{background:var(--accent)}
+.scale .tk{position:absolute;top:28px;left:var(--x);transform:translateX(-50%);font-size:12px;color:var(--muted)}
+.cap{font-size:13px;color:var(--muted)}
+.venues{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.venues div{border:1px solid var(--line);border-radius:12px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;font-size:13px;line-height:1.45;background:var(--page);color:var(--ink)}
+.venues svg{width:26px;height:26px;color:var(--accent)}
+
+/* expertise */
+.areas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.area{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;grid-template-columns:48px minmax(0,1fr);gap:4px 16px}
+.area .ic{width:48px;height:48px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;grid-row:span 3}
+.area .ic svg{width:26px;height:26px}
+.area h3{font:700 18px/1.5 var(--body)}
+.area p{color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font-size:13px;padding:3px 11px;border-radius:99px;background:var(--page);border:1px solid var(--line);color:var(--ink)}
+
+/* experience */
+.jobs{display:grid;gap:14px}
+.job{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px}
+.job.cur{border-color:#9fd3c4;box-shadow:inset 4px 0 0 var(--accent)}
+.page[dir="rtl"] .job.cur{box-shadow:inset -4px 0 0 var(--accent)}
+.job h3{font:700 19px/1.5 var(--body)}
+.job .org{color:var(--navy);font-weight:600;font-size:15px}
+.job .when{grid-column:2;grid-row:1/3;align-self:start;font-size:14px;font-weight:600;color:var(--muted);background:var(--page);border:1px solid var(--line);border-radius:99px;padding:4px 12px;white-space:nowrap}
+.job.cur .when{color:var(--accent);background:var(--accent-soft);border-color:transparent}
+.job ul{grid-column:1/-1;margin:10px 0 0;padding-inline-start:20px;display:grid;gap:4px;font-size:15.5px}
+.job li::marker{color:var(--accent)}
+
+/* education */
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ed{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.ed .kind{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:600;color:var(--accent)}
+.ed .kind span:last-child{color:var(--muted)}
+.ed h3{font:700 17px/1.55 var(--body)}
+.ed .by{color:var(--muted);font-size:15px}
+.ed.wide{grid-column:1/-1}
+
+/* contact */
+.contact{margin-top:clamp(48px,7vw,72px);border-radius:20px;padding:clamp(24px,5vw,44px);background:var(--navy);color:#fff;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,360px);gap:28px;align-items:center}
+.contact .tag{display:inline-block;font-size:13px;font-weight:600;background:rgb(255 255 255 / .12);border-radius:99px;padding:4px 12px;color:#cfe7df}
+.contact h2{color:#fff;font:800 clamp(24px,3.6vw,36px)/1.45 var(--head);margin-top:12px}
+.contact p{color:#c6d3e4;margin-top:8px}
+.ct-actions{display:flex;flex-direction:column;gap:10px}
+.ct-actions .btn{border-color:rgb(255 255 255 / .25);background:rgb(255 255 255 / .06);color:#fff}
+.ct-actions .btn-solid{background:#2fbf98;border-color:#2fbf98;color:#08241c}
+.reach-row{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid rgb(255 255 255 / .2);border-radius:10px;padding:6px;padding-inline-start:14px;background:rgb(255 255 255 / .05)}
+.reach-row .num{font-size:15px;overflow-wrap:anywhere;user-select:all;min-width:0}
+.reach-row .btn{padding:8px 12px;font-size:13px;flex:none}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:14px;padding-top:24px}
+
+@media (max-width:900px){.cases{grid-template-columns:1fr}.nav{display:none}}
+@media (max-width:760px){
+  body{font-size:16px}
+  .hero{grid-template-columns:1fr}
+  .portrait{max-width:280px;width:100%;margin-inline:auto;order:-1}
+  .hero-text{text-align:center}
+  .facts,.cta{justify-content:center}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about,.areas,.edu,.contact{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr}
+  .job .when{grid-column:1;grid-row:auto;justify-self:start;margin-bottom:6px;order:-1}
+}
+@media (prefers-reduced-motion:no-preference){.bar i{animation:grow 1s cubic-bezier(.2,.7,.2,1) both}@keyframes grow{from{width:0}}}
+</style>
+
+</head>
+<body>
+<div class="page" data-lang="ar" lang="ar" dir="rtl">
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#home"><span class="ar">أحمد المعمري</span><span class="en">Ahmed Almaamari</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about"><span class="ar">نبذة</span><span class="en">About</span></a>
+      <a href="#results"><span class="ar">الإنجازات</span><span class="en">Achievements</span></a>
+      <a href="#experience"><span class="ar">الخبرات</span><span class="en">Experience</span></a>
+      <a href="#education"><span class="ar">التعليم</span><span class="en">Education</span></a>
+      <a href="#contact"><span class="ar">تواصل</span><span class="en">Contact</span></a>
+    </nav>
+    <button class="lang" id="lang" type="button"><span class="ar">English</span><span class="en">العربية</span></button>
+  </div>
+</header>
+
+<main class="wrap" id="home">
+
+  <section class="hero">
+    <div class="hero-text">
+      <span class="role-tag"><span class="ar">التسويق الرقمي · القطاع الصحي</span><span class="en">Digital marketing · Healthcare</span></span>
+      <h1><span class="ar">أحمد المعمري</span><span class="en">Ahmed Almaamari</span></h1>
+      <div class="hero-job"><span class="ar">مدير التسويق الرقمي، مستشفى تداوي العام</span><span class="en">Digital Marketing Manager, Tadawi General Hospital</span></div>
+      <p class="lead"><span class="ar">أحوّل بيانات التسويق إلى قرارات تنمّي الطلب: أضع الخطة التسويقية، وأدير الحملات التي تنفّذها، وأقيس نتائجها.</span><span class="en">I turn marketing data into decisions that grow demand: I build the marketing plan, run the campaigns behind it, and measure the results.</span></p>
+      <div class="facts">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="ar">الدمام، السعودية</span><span class="en">Dammam, Saudi Arabia</span></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg><span class="ar">في التسويق منذ 2015</span><span class="en">In marketing since 2015</span></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10"/></svg><span class="ar">العربية والإنجليزية</span><span class="en">Arabic &amp; English</span></span>
+      </div>
+      <div class="cta">
+        <a class="btn btn-solid" href="#contact"><span class="ar">تواصل معي</span><span class="en">Get in touch</span></a>
+        <a class="btn" href="https://www.linkedin.com/in/ahmedalmaamari" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <div class="card"></div>
+            <div class="cut"><img src="ahmed.webp" alt="أحمد المعمري" width="617" height="620"></div>
+    </figure>
+  </section>
+
+  <section class="kpis" aria-label="Key figures">
+    <div class="kpi"><span class="v num">50K+</span><span class="l"><span class="ar">متابع للمستشفى</span><span class="en">Hospital followers</span></span><span class="d"><span class="ar">على 8 منصات، ارتفاعًا من 26 ألف</span><span class="en">On 8 platforms, up from 26K</span></span></div>
+    <div class="kpi"><span class="v num">4.3</span><span class="l"><span class="ar">تقييم Google</span><span class="en">Google rating</span></span><span class="d"><span class="ar">ارتفاعًا من 4.1</span><span class="en">Up from 4.1</span></span></div>
+    <div class="kpi"><span class="v num">6,200+</span><span class="l"><span class="ar">مراجعة على Google</span><span class="en">Google reviews</span></span><span class="d"><span class="ar">يقوم عليها التقييم</span><span class="en">Behind the rating</span></span></div>
+    <div class="kpi"><span class="v num">90+</span><span class="l"><span class="ar">فعالية</span><span class="en">Events</span></span><span class="d"><span class="ar">صحية ومجتمعية وأيام عالمية</span><span class="en">Health, community &amp; global days</span></span></div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="sec-head"><h2><span class="ar">نبذة مهنية</span><span class="en">Professional summary</span></h2></div>
+    <div class="box about">
+      <div>
+        <p><span class="ar">أقود التسويق الرقمي في مستشفى تداوي العام بالدمام: حملات البحث والتواصل المدفوعة، وثماني منصات اجتماعية، ومحتوى مرئي يقدّمه الأطباء، والفعاليات، والتقارير التنفيذية.</span><span class="en">I lead digital marketing at Tadawi General Hospital in Dammam: paid search and paid social campaigns, eight social platforms, physician-led video content, events and executive reporting.</span></p>
+        <p><span class="ar">خلفيتي في تسويق التجارة الإلكترونية على Amazon و Noon و سلة، وأحمل بكالوريوس نظم المعلومات الإدارية. أدرس حاليًا ماجستير التسويق الرقمي وأبحاث السوق.</span><span class="en">My background is in e-commerce marketing across Amazon, Noon and Salla, and my degree is in Management Information Systems. I am pursuing a master's degree in Digital Marketing and Market Research.</span></p>
+      </div>
+      <div class="focus">
+        <h3><span class="ar">مجالات التركيز</span><span class="en">Focus areas</span></h3>
+        <ul>
+          <li><span class="ar">التخطيط وتقويم الحملات</span><span class="en">Planning &amp; campaign calendars</span></li>
+          <li><span class="ar">الإعلانات المدفوعة والبحث</span><span class="en">Paid media &amp; search</span></li>
+          <li><span class="ar">المحتوى والفيديو القصير</span><span class="en">Content &amp; short-form video</span></li>
+          <li><span class="ar">العلامة التجارية والسمعة</span><span class="en">Brand &amp; reputation</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="results">
+    <div class="sec-head">
+      <h2><span class="ar">أبرز الإنجازات</span><span class="en">Key achievements</span></h2>
+      <p><span class="ar">كل إنجاز في ثلاث خطوات: الوضع قبل، ما قمت به، والنتيجة.</span><span class="en">Each achievement in three steps: where it started, what I did, and the result.</span></p>
+    </div>
+    <div class="cases">
+
+      <article class="case">
+        <div class="case-hd">
+          <span class="case-tag"><span class="ar">منصات التواصل</span><span class="en">Social media</span></span>
+          <h3><span class="ar">جمهور المستشفى على 8 منصات تضاعف تقريبًا</span><span class="en">Hospital audience across 8 platforms nearly doubled</span></h3>
+        </div>
+        <div class="fig">
+          <span class="big num">50K+</span>
+          <div class="bars">
+            <div class="bar-row"><span><span class="ar">قبل</span><span class="en">Before</span></span><div class="bar"><i style="--w:52%"></i></div><span class="num">26K</span></div>
+            <div class="bar-row now"><span><span class="ar">الآن</span><span class="en">Now</span></span><div class="bar"><i style="--w:100%"></i></div><span class="num">50K+</span></div>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step"><i>1</i><b><span class="ar">قبل</span><span class="en">Before</span></b><p><span class="ar">26 ألف متابع على جميع المنصات عند استلام الحسابات.</span><span class="en">26K followers across all platforms when I took over the accounts.</span></p></div>
+          <div class="step"><i>2</i><b><span class="ar">ما قمت به</span><span class="en">What I did</span></b><p><span class="ar">جدولة محتوى على 8 منصات، وفيديوهات قصيرة مع أطباء من أكثر من 9 تخصصات.</span><span class="en">Scheduled content on 8 platforms and short-form video with physicians across 9+ specialties.</span></p></div>
+          <div class="step res"><i>✓</i><b><span class="ar">النتيجة</span><span class="en">Result</span></b><p><span class="ar">أكثر من 50 ألف متابع، ومنها TikTok من 7.7 ألف إلى نحو 14 ألف (<strong class="num">+81%</strong>).</span><span class="en">50K+ followers, including TikTok from 7.7K to about 14K (<strong class="num">+81%</strong>).</span></p></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-hd">
+          <span class="case-tag"><span class="ar">السمعة الإلكترونية</span><span class="en">Online reputation</span></span>
+          <h3><span class="ar">تقييم المستشفى على Google ارتفع إلى 4.3</span><span class="en">Hospital Google rating rose to 4.3</span></h3>
+        </div>
+        <div class="fig">
+          <span class="big num">4.3</span>
+          <div class="scale" role="img" aria-label="4.1 → 4.3">
+            <span class="ln"></span><span class="seg"></span>
+            <span class="pt b" style="--x:20%"></span><span class="pt a" style="--x:60%"></span>
+            <span class="tk" style="--x:0%">4.0</span><span class="tk" style="--x:20%">4.1</span><span class="tk" style="--x:40%">4.2</span><span class="tk" style="--x:60%">4.3</span><span class="tk" style="--x:80%">4.4</span><span class="tk" style="--x:100%">4.5</span>
+          </div>
+          <span class="cap"><span class="ar">التقييم من 5، والمقياس مكبّر بين 4.0 و 4.5</span><span class="en">Out of 5, scale zoomed to 4.0–4.5</span></span>
+        </div>
+        <div class="steps">
+          <div class="step"><i>1</i><b><span class="ar">قبل</span><span class="en">Before</span></b><p><span class="ar">تقييم 4.1 على Google.</span><span class="en">A 4.1 Google rating.</span></p></div>
+          <div class="step"><i>2</i><b><span class="ar">ما قمت به</span><span class="en">What I did</span></b><p><span class="ar">خصصت مسؤولًا للرد على المراجعات بأسلوب رد موحّد، وأطلقت رسائل تلقائية بعد الزيارة: المريض الراضي تصله دعوة للتقييم، وغير الراضي يصله رابط مباشر للشكاوى. مع نقاط تقييم QR و NFC داخل الأقسام.</span><span class="en">Assigned a dedicated owner and a standard response approach for reviews, and launched automated post-visit messages: satisfied patients get a review invite, dissatisfied ones get a direct complaints link. Plus QR/NFC review points in departments.</span></p></div>
+          <div class="step res"><i>✓</i><b><span class="ar">النتيجة</span><span class="en">Result</span></b><p><span class="ar"><strong class="num">4.3</strong> عبر <span class="num">6,200+</span> مراجعة.</span><span class="en"><strong class="num">4.3</strong> across <span class="num">6,200+</span> reviews.</span></p></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-hd">
+          <span class="case-tag"><span class="ar">الفعاليات</span><span class="en">Events</span></span>
+          <h3><span class="ar">فعاليات صحية ومجتمعية وأيام عالمية</span><span class="en">Health, community and global health day events</span></h3>
+        </div>
+        <div class="fig">
+          <span class="big num">90+</span>
+          <div class="venues">
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 21V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v16M9 21v-4h6v4M12 7v5M9.5 9.5h5"/></svg><span class="ar">داخل المستشفى</span><span class="en">In the hospital</span></div>
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 13h2M13 13h2M9 17h2M13 17h2"/></svg><span class="ar">مقار الشركات</span><span class="en">Company sites</span></div>
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 8h14l-1 13H6L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="ar">المولات والأماكن العامة</span><span class="en">Malls &amp; public venues</span></div>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step"><i>1</i><b><span class="ar">النطاق</span><span class="en">Scope</span></b><p><span class="ar">حملات توعية، وأيام صحية عالمية، وفحوصات ميدانية للموظفين في مقار الشركات وللجمهور في المولات والأماكن العامة.</span><span class="en">Awareness drives, global health days, and on-site screenings for employees at company sites and for the public in malls and public venues.</span></p></div>
+          <div class="step"><i>2</i><b><span class="ar">ما قمت به</span><span class="en">What I did</span></b><p><span class="ar">التخطيط والتنسيق والإدارة والتغطية الإعلامية لعشرات الأيام الصحية العالمية على مدار العام.</span><span class="en">Planning, coordination, management and media coverage for dozens of global health days throughout the year.</span></p></div>
+          <div class="step res"><i>✓</i><b><span class="ar">النتيجة</span><span class="en">Result</span></b><p><span class="ar"><strong class="num">90+</strong> فعالية.</span><span class="en"><strong class="num">90+</strong> events.</span></p></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="sec" id="expertise">
+    <div class="sec-head">
+      <h2><span class="ar">مجالات الخبرة</span><span class="en">Areas of expertise</span></h2>
+      <p><span class="ar">ما أديره يوميًا، والأدوات التي أستخدمها فيه.</span><span class="en">What I run day to day, and the tools I use for it.</span></p>
+    </div>
+    <div class="areas">
+      <article class="area">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M7 14h4M7 17h7" stroke-linecap="round"/></svg></div>
+        <h3><span class="ar">التخطيط وتقويم الحملات</span><span class="en">Planning &amp; campaign calendars</span></h3>
+        <p><span class="ar">الخطة التسويقية السنوية، وتقويم الحملات، وعرض الخطط والنتائج النصف سنوية على الرئيس التنفيذي.</span><span class="en">The annual marketing plan, the campaign calendar, and half-year plans and results presented to the CEO.</span></p>
+        <div class="chips"><span class="ar">استراتيجية التسويق</span><span class="en">Marketing strategy</span><span class="ar">العروض التنفيذية</span><span class="en">Executive presentations</span></div>
+      </article>
+      <article class="area">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21" stroke-linecap="round"/><path d="M7.5 12l2.5-3 2 2 2-3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3><span class="ar">الإعلانات المدفوعة والبحث</span><span class="en">Paid media &amp; search</span></h3>
+        <p><span class="ar">حملات لعدة أقسام طبية، ومنها صفحة هبوط متوافقة مع سياسات Google لإعلانات الرعاية الصحية.</span><span class="en">Campaigns for several clinical departments, including a landing page built to Google's healthcare ad policies.</span></p>
+        <div class="chips"><span>Google Ads</span><span>Meta Ads</span><span>Snapchat Ads</span><span>YouTube Ads</span><span>X Ads</span><span>SEO</span></div>
+      </article>
+      <article class="area">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10.5 9v6l4.5-3z" stroke-linejoin="round"/></svg></div>
+        <h3><span class="ar">المحتوى والفيديو القصير</span><span class="en">Content &amp; short-form video</span></h3>
+        <p><span class="ar">كتابة وإنتاج فيديوهات مع أطباء من أكثر من 9 تخصصات، وجدولة المحتوى على 8 منصات.</span><span class="en">Scripting and producing videos with physicians across 9+ specialties, scheduled across 8 platforms.</span></p>
+        <div class="chips"><span>TikTok</span><span>Instagram</span><span>Snapchat</span><span>YouTube</span><span>X</span><span>Facebook</span><span>LinkedIn</span><span class="ar">التصوير والمونتاج</span><span class="en">Photo &amp; video editing</span></div>
+      </article>
+      <article class="area">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z" stroke-linejoin="round"/></svg></div>
+        <h3><span class="ar">العلامة التجارية والسمعة</span><span class="en">Brand &amp; reputation</span></h3>
+        <p><span class="ar">رفع الوعي بالعلامة التجارية للمستشفى، وتعزيز سمعتها الإلكترونية، ومتابعة تجربة المريض بتقارير دورية للإدارة.</span><span class="en">Building awareness of the hospital brand, strengthening its online reputation, and tracking patient experience through regular reports to leadership.</span></p>
+        <div class="chips"><span class="ar">الوعي بالعلامة التجارية</span><span class="en">Brand awareness</span><span class="ar">إدارة السمعة</span><span class="en">Reputation management</span><span class="ar">تجربة المريض</span><span class="en">Patient experience</span><span class="ar">تقارير الأداء</span><span class="en">Performance reporting</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="experience">
+    <div class="sec-head"><h2><span class="ar">الخبرات العملية</span><span class="en">Work experience</span></h2></div>
+    <div class="jobs">
+      <article class="job cur">
+        <h3><span class="ar">مدير التسويق الرقمي</span><span class="en">Digital Marketing Manager</span></h3>
+        <div class="org"><span class="ar">مستشفى تداوي العام، الدمام</span><span class="en">Tadawi General Hospital, Dammam</span></div>
+        <span class="when"><span class="ar">أبريل 2025 – الآن</span><span class="en">Apr 2025 – Present</span></span>
+        <ul>
+          <li><span class="ar">أضع الخطة التسويقية وتقويم الحملات، وأعرض الخطط والنتائج النصف سنوية على الرئيس التنفيذي.</span><span class="en">Build the marketing plan and campaign calendar; present half-year plans and results to the CEO.</span></li>
+          <li><span class="ar">أدير الحملات المدفوعة على بحث Google و Meta و Snapchat لعدة أقسام طبية.</span><span class="en">Run paid campaigns on Google Search, Meta and Snapchat for several clinical departments.</span></li>
+          <li><span class="ar">نمّيت المتابعين من 26 ألف إلى أكثر من 50 ألف على 8 منصات، ورفعت تقييم Google من 4.1 إلى 4.3.</span><span class="en">Grew followers from 26K to 50K+ across 8 platforms and raised the Google rating from 4.1 to 4.3.</span></li>
+          <li><span class="ar">أدير أكثر من 90 فعالية صحية وتوعوية ومجتمعية.</span><span class="en">Run 90+ health awareness and community events.</span></li>
+        </ul>
+      </article>
+      <article class="job">
+        <h3><span class="ar">مدير التسويق والإعلام</span><span class="en">Marketing &amp; Media Manager</span></h3>
+        <div class="org"><span class="ar">مركز رشد التخصصي</span><span class="en">Rushd Specialized Center</span></div>
+        <span class="when"><span class="ar">ديسمبر 2023 – أبريل 2025</span><span class="en">Dec 2023 – Apr 2025</span></span>
+        <ul>
+          <li><span class="ar">طوّرت استراتيجيات لرفع الوعي بالمركز وتعزيز سمعته.</span><span class="en">Developed strategies to raise the center's awareness and reputation.</span></li>
+          <li><span class="ar">أدرت الإعلانات المدفوعة وأنتجت المحتوى داخليًا، بما فيه التصوير والمونتاج.</span><span class="en">Managed paid ads and produced content in-house, including photo and video.</span></li>
+        </ul>
+      </article>
+      <article class="job">
+        <h3><span class="ar">مدير التسويق</span><span class="en">Marketing Manager</span></h3>
+        <div class="org"><span class="ar">شركة عبر الفلك للاتصالات، الطائف</span><span class="en">Abr Al Falak Communications, Taif</span></div>
+        <span class="when num">2021 – 2023</span>
+        <ul>
+          <li><span class="ar">قدت استراتيجية التسويق الرقمي والحملات الإلكترونية.</span><span class="en">Led digital marketing strategy and online campaigns.</span></li>
+          <li><span class="ar">أطلقت وأدرت حسابات البائع على Amazon و Noon و سلة.</span><span class="en">Launched and managed seller accounts on Amazon, Noon and Salla.</span></li>
+        </ul>
+      </article>
+      <article class="job">
+        <h3><span class="ar">مسوّق رقمي مستقل</span><span class="en">Freelance Digital Marketer</span></h3>
+        <div class="org"><span class="ar">عمل حر</span><span class="en">Self-employed</span></div>
+        <span class="when num">2019 – 2021</span>
+        <ul><li><span class="ar">جهّزت متاجر على سلة للعملاء وأطلقت حملاتها، مع تقارير أداء وتوصيات.</span><span class="en">Set up Salla stores for clients and launched their campaigns, with performance reports.</span></li></ul>
+      </article>
+      <article class="job">
+        <h3><span class="ar">مشرف تسويق</span><span class="en">Marketing Supervisor</span></h3>
+        <div class="org">Gulf MB</div>
+        <span class="when num">2016 – 2019</span>
+        <ul>
+          <li><span class="ar">زيارات ميدانية للمواقع والعملاء، وتسويق ميداني مباشر للمنتجات.</span><span class="en">Field visits to sites and clients, and direct field marketing of products.</span></li>
+          <li><span class="ar">أشرفت على فريق من أخصائيي المبيعات، وحللت بيانات المبيعات في تقارير دورية للإدارة.</span><span class="en">Supervised a team of sales specialists and analyzed sales data in regular reports to management.</span></li>
+        </ul>
+      </article>
+      <article class="job">
+        <h3><span class="ar">مسوّق</span><span class="en">Marketer</span></h3>
+        <div class="org">Interact</div>
+        <span class="when num">2015 – 2016</span>
+        <ul>
+          <li><span class="ar">أنشطة تسويق ميداني وزيارات للمواقع لزيادة المبيعات وتحقيق أهداف العملاء.</span><span class="en">Field marketing activities and site visits to grow sales and meet client objectives.</span></li>
+          <li><span class="ar">تعامل مباشر مع الأفراد لعرض المنتجات وكسب العملاء.</span><span class="en">Direct engagement with individual customers to present products and win clients.</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="education">
+    <div class="sec-head"><h2><span class="ar">التعليم والشهادات</span><span class="en">Education &amp; certifications</span></h2></div>
+    <div class="edu">
+      <article class="ed">
+        <div class="kind"><span><span class="ar">ماجستير</span><span class="en">Master's</span></span><span><span class="ar">قيد الدراسة</span><span class="en">In progress</span></span></div>
+        <h3><span class="ar">ماجستير التسويق الرقمي وأبحاث السوق</span><span class="en">Master's in Digital Marketing &amp; Market Research</span></h3>
+        <div class="by"><span class="ar">الأكاديمية العربية للعلوم الإدارية والمالية والمصرفية</span><span class="en">Arab Academy for Management, Banking and Financial Sciences</span></div>
+      </article>
+      <article class="ed">
+        <div class="kind"><span><span class="ar">بكالوريوس</span><span class="en">Bachelor's</span></span><span class="num">2018</span></div>
+        <h3><span class="ar">بكالوريوس نظم المعلومات الإدارية</span><span class="en">BSc in Management Information Systems</span></h3>
+        <div class="by"><span class="ar">جامعة الطائف، كلية العلوم الإدارية والمالية</span><span class="en">Taif University, College of Administrative &amp; Financial Sciences</span></div>
+      </article>
+      <article class="ed">
+        <div class="kind"><span><span class="ar">دبلوم تدريبي</span><span class="en">Training diploma</span></span><span class="num">2024</span></div>
+        <h3>Comprehensive Marketing Training Diploma</h3>
+        <div class="by"><span class="ar">Mastery Academy · 56 ساعة</span><span class="en">Mastery Academy · 56 hours</span></div>
+      </article>
+      <article class="ed">
+        <div class="kind"><span><span class="ar">دبلوم تدريبي</span><span class="en">Training diploma</span></span><span class="num">2025</span></div>
+        <h3>Advanced Data Visualisation &amp; Business Analytics Tools</h3>
+        <div class="by"><span class="ar">iLearn International Training College · 45 ساعة · تقدير ممتاز</span><span class="en">iLearn International Training College · 45 hours · Excellent</span></div>
+        <div class="chips"><span>Power BI</span><span>Tableau</span><span>Looker Studio</span><span>SQL</span><span>Advanced Excel</span></div>
+      </article>
+      <article class="ed">
+        <div class="kind"><span><span class="ar">اللغة الإنجليزية</span><span class="en">English</span></span><span class="num">2025</span></div>
+        <h3>Intensive English Course</h3>
+        <div class="by"><span class="ar">الأكاديمية العربية الدولية · 360 ساعة</span><span class="en">Arab International Academy · 360 hours</span></div>
+      </article>
+      <article class="ed">
+        <div class="kind"><span><span class="ar">دورات</span><span class="en">Courses</span></span><span class="num">2026</span></div>
+        <h3><span class="ar">دورات SAS في البيانات والإحصاء</span><span class="en">SAS courses in data and statistics</span></h3>
+        <div class="by">Data Literacy Essentials · Introduction to Statistical Concepts · Statistics You Need to Know for Machine Learning</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div>
+      <span class="tag"><span class="ar">متاح لفرص قيادة التسويق الرقمي والاستشارات</span><span class="en">Open to digital marketing leadership roles &amp; consulting</span></span>
+      <h2><span class="ar">عندك هدف نمو؟<br>خلّنا نحوّله إلى خطة تُقاس بالأرقام.</span><span class="en">Have a growth goal?<br>Let's turn it into a plan you can measure.</span></h2>
+      <p><span class="ar">أرسل لي سطرين عن هدفك أو الدور المتاح، وأرد عليك بنفسي.</span><span class="en">Send me two lines about your goal or the role, and I'll reply personally.</span></p>
+    </div>
+    <div class="ct-actions">
+      <a class="btn btn-solid" href="https://wa.me/966561888151" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z" stroke-linejoin="round"/></svg><span class="ar">راسلني على واتساب</span><span class="en">Message me on WhatsApp</span></a>
+      <div class="reach-row"><span class="num" id="mail">ahiviad@icloud.com</span><button class="btn" type="button" data-copy="mail"><span class="ar">نسخ البريد</span><span class="en">Copy email</span></button></div>
+      <div class="reach-row"><span class="num" id="phone">+966 56 188 8151</span><button class="btn" type="button" data-copy="phone"><span class="ar">نسخ الرقم</span><span class="en">Copy number</span></button></div>
+      <a class="btn" href="https://www.linkedin.com/in/ahmedalmaamari" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span><span class="ar">أحمد المعمري</span><span class="en">Ahmed Almaamari</span> · <span class="num">2026</span></span>
+    <span><span class="ar">الدمام، المملكة العربية السعودية</span><span class="en">Dammam, Saudi Arabia</span></span>
+  </footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var page=document.querySelector('.page');
+  function setLang(l,save){page.dataset.lang=l;page.lang=l;page.dir=l==='ar'?'rtl':'ltr';if(save){try{localStorage.setItem('lang',l)}catch(e){}}}
+  var s='ar';try{s=localStorage.getItem('lang')||'ar'}catch(e){}
+  if(location.hash==='#en')s='en';
+  setLang(s==='en'?'en':'ar');
+  document.getElementById('lang').addEventListener('click',function(){setLang(page.dataset.lang==='ar'?'en':'ar',true)});
+  [].forEach.call(document.querySelectorAll('[data-copy]'),function(btn){
+    var src=document.getElementById(btn.dataset.copy);
+    function sel(){var r=document.createRange();r.selectNodeContents(src);var g=getSelection();g.removeAllRanges();g.addRange(r)}
+    btn.addEventListener('click',function(){
+      var o=btn.innerHTML;
+      var done=function(){btn.textContent=page.dataset.lang==='ar'?'تم النسخ':'Copied';setTimeout(function(){btn.innerHTML=o},1600)};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(src.textContent.replace(/\s/g,'')).then(done,sel)}else{sel()}
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
