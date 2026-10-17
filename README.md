@@ -1,3 +1,3 @@
 # Ahmed Almaamari
 
-Personal résumé site: https://hmodezx.github.io
+Personal résumé site: https://ahmedalmaamari.github.io
