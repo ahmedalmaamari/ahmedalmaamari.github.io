@@ -212,7 +212,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 
   <section class="kpis" aria-label="Key figures">
     <div class="kpi"><span class="v num" data-to="50" data-from="26" data-suffix="K+">50K+</span><span class="l"><span class="ar">متابع للمستشفى</span><span class="en">Hospital followers</span></span><span class="d"><span class="ar">على 8 منصات، ارتفاعًا من 26 ألف</span><span class="en">On 8 platforms, up from 26K</span></span></div>
-    <div class="kpi"><span class="v num" data-to="4.3" data-from="4.1" data-dec="1">4.3</span><span class="l"><span class="ar">تقييم Google</span><span class="en">Google rating</span></span><span class="d"><span class="ar">ارتفاعًا من 4.1</span><span class="en">Up from 4.1</span></span></div>
+    <div class="kpi"><span class="v num" data-to="4.3" data-from="4.1" data-dec="1" data-dur="2800">4.3</span><span class="l"><span class="ar">تقييم Google</span><span class="en">Google rating</span></span><span class="d"><span class="ar">ارتفاعًا من 4.1</span><span class="en">Up from 4.1</span></span></div>
     <div class="kpi"><span class="v num" data-to="6200" data-from="0" data-suffix="+">6,200+</span><span class="l"><span class="ar">مراجعة على Google</span><span class="en">Google reviews</span></span><span class="d"><span class="ar">يقوم عليها التقييم</span><span class="en">Behind the rating</span></span></div>
     <div class="kpi"><span class="v num" data-to="90" data-from="0" data-suffix="+">90+</span><span class="l"><span class="ar">فعالية</span><span class="en">Events</span></span><span class="d"><span class="ar">صحية ومجتمعية وأيام عالمية</span><span class="en">Health, community &amp; global days</span></span></div>
   </section>
@@ -268,7 +268,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
           <h3><span class="ar">تقييم المستشفى على Google ارتفع إلى 4.3</span><span class="en">Hospital Google rating rose to 4.3</span></h3>
         </div>
         <div class="fig">
-          <span class="big num" data-to="4.3" data-from="4.1" data-dec="1">4.3</span>
+          <span class="big num" data-to="4.3" data-from="4.1" data-dec="1" data-dur="2800">4.3</span>
           <div class="scale" role="img" aria-label="4.1 → 4.3">
             <span class="ln"></span><span class="seg"></span>
             <span class="pt b" style="--x:20%"></span><span class="pt a" style="--x:60%"></span>
@@ -482,10 +482,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   var els=[].slice.call(document.querySelectorAll('[data-to]'));
   if(!els.length||!('IntersectionObserver' in window)) return;
   if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  function fmt(el,v){var d=+(el.dataset.dec||0);var t=d?v.toFixed(d):Math.round(v).toLocaleString('en-US');return t+(el.dataset.suffix||'')}
+  function fmt(el,v,done){var d=+(el.dataset.dec||0);if(d&&!done)d+=1;var t=d?v.toFixed(d):Math.round(v).toLocaleString('en-US');return t+(el.dataset.suffix||'')}
   function run(el){
-    var from=+el.dataset.from,to=+el.dataset.to,dur=1600,t0=null;
-    function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=fmt(el,from+(to-from)*e);if(p<1)requestAnimationFrame(step)}
+    var from=+el.dataset.from,to=+el.dataset.to,dur=+(el.dataset.dur||1600),t0=null;
+    function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),e=el.dataset.dur?(0.5-Math.cos(Math.PI*p)/2):1-Math.pow(1-p,3);el.textContent=fmt(el,from+(to-from)*e,p>=1);if(p<1)requestAnimationFrame(step)}
     el.textContent=fmt(el,from);requestAnimationFrame(step);
   }
   var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){io.unobserve(en.target);run(en.target)}})},{threshold:.6});
