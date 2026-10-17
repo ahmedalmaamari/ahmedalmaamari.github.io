@@ -10,9 +10,10 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://ahmedalmaamari.github.io/">
 <meta property="og:title" content="أحمد المعمري | Ahmed Almaamari">
 <meta property="og:description" content="مدير التسويق الرقمي · التسويق الصحي · الدمام">
-<meta property="og:image" content="https://ahmedalmaamari.github.io/og-card.jpg">
+<meta property="og:image" content="https://ahmedalmaamari.github.io/og-card.jpg?v=2">
 <title>أحمد المعمري</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@600;700;800&display=swap">
 <style>
@@ -115,6 +116,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .adstats div{border:1px solid var(--line);border-radius:12px;padding:10px 8px;background:var(--page);display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px}
 .adstats b{font-size:18px;color:var(--ink)}
 .adstats span{font-size:12px;color:var(--muted);line-height:1.4}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.gallery img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block}
+.gallery figcaption{padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.gallery figcaption b{color:var(--ink);font-size:15px}
+.gallery figcaption span{color:var(--muted);font-size:14px;line-height:1.6}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.gallery{grid-template-columns:1fr}}
 .venues{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .venues div{border:1px solid var(--line);border-radius:12px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;font-size:13px;line-height:1.45;background:var(--page);color:var(--ink)}
 .venues svg{width:26px;height:26px;color:var(--accent)}
@@ -194,6 +203,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
     <nav class="nav" aria-label="Sections">
       <a href="#about"><span class="ar">نبذة</span><span class="en">About</span></a>
       <a href="#results"><span class="ar">الإنجازات</span><span class="en">Achievements</span></a>
+      <a href="#work"><span class="ar">الأعمال</span><span class="en">Work</span></a>
       <a href="#experience"><span class="ar">الخبرات</span><span class="en">Experience</span></a>
       <a href="#education"><span class="ar">التعليم</span><span class="en">Education</span></a>
       <a href="#contact"><span class="ar">تواصل</span><span class="en">Contact</span></a>
@@ -295,7 +305,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         <div class="steps">
           <div class="step"><i>1</i><b><span class="ar">قبل</span><span class="en">Before</span></b><p><span class="ar">26 ألف متابع على جميع المنصات عند استلام الحسابات.</span><span class="en">26K followers across all platforms when I took over the accounts.</span></p></div>
           <div class="step"><i>2</i><b><span class="ar">ما قمت به</span><span class="en">What I did</span></b><p><span class="ar">جدولة محتوى على 8 منصات، وفيديوهات قصيرة مع أطباء من أكثر من 9 تخصصات.</span><span class="en">Scheduled content on 8 platforms and short-form video with physicians across 9+ specialties.</span></p></div>
-          <div class="step res"><i>✓</i><b><span class="ar">النتيجة</span><span class="en">Result</span></b><p><span class="ar">أكثر من 50 ألف متابع، ومنها TikTok من 7.7 ألف إلى نحو 14 ألف (<strong class="num">+81%</strong>).</span><span class="en">50K+ followers, including TikTok from 7.7K to about 14K (<strong class="num">+81%</strong>).</span></p></div>
+          <div class="step res"><i>✓</i><b><span class="ar">النتيجة</span><span class="en">Result</span></b><p><span class="ar">أكثر من 50 ألف متابع، ومنها TikTok من 7.7 ألف إلى نحو 14 ألف (<strong class="num">+81%</strong>)، وأعلى فيديو تجاوز <strong class="num">480K</strong> مشاهدة.</span><span class="en">50K+ followers, including TikTok from 7.7K to about 14K (<strong class="num">+81%</strong>); the top video passed <strong class="num">480K</strong> views.</span></p></div>
         </div>
       </article>
 
@@ -340,6 +350,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         </div>
       </article>
 
+    </div>
+  </section>
+
+  <section class="sec" id="work">
+    <div class="sec-head">
+      <h2><span class="ar">نماذج من الأعمال</span><span class="en">Selected work</span></h2>
+      <p><span class="ar">منشورات من حسابات مستشفى تداوي العام: كتابة المحتوى والإشراف على النشر. التصميم: فريق التصميم.</span><span class="en">Posts from Tadawi General Hospital's accounts: content writing and publishing supervision. Design: the design team.</span></p>
+    </div>
+    <div class="gallery">
+      <figure><img src="work/khaleeji-cup.webp" alt="منشور الكأس سعودي" loading="lazy" width="720" height="960"><figcaption><b><span class="ar">تسويق اللحظة</span><span class="en">Real-time marketing</span></b><span><span class="ar">تهنئة فوز المنتخب بكأس الخليج 27، ضمن هوية شهر التوعية بسرطان الثدي.</span><span class="en">Congratulating the national team on Gulf Cup 27, within the breast cancer awareness month identity.</span></span></figcaption></figure>
+      <figure><img src="work/cbahi-5th.webp" alt="منشور تجديد اعتماد سباهي" loading="lazy" width="720" height="960"><figcaption><b><span class="ar">سمعة المؤسسة</span><span class="en">Institutional reputation</span></b><span><span class="ar">إعلان تجديد اعتماد سباهي للمرة الخامسة على التوالي.</span><span class="en">Announcing CBAHI accreditation renewed for the fifth consecutive time.</span></span></figcaption></figure>
     </div>
   </section>
 
@@ -534,7 +555,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 <script>
 (function(){
   if(!('IntersectionObserver' in window)) return;
-  var items=[].slice.call(document.querySelectorAll('.kpi,.sec-head,.box,.case,.area,.job,.ed,.contact'));
+  var items=[].slice.call(document.querySelectorAll('.kpi,.sec-head,.box,.case,.area,.job,.ed,.contact,.gallery figure'));
   document.documentElement.classList.add('reveal-on');
   items.forEach(function(el){el.classList.add('rv')});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
