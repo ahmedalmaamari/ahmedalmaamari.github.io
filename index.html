@@ -7,9 +7,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="أحمد المعمري، مدير التسويق الرقمي في مستشفى تداوي العام بالدمام. Ahmed Almaamari, Digital Marketing Manager.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:title" content="أحمد المعمري | Ahmed Almaamari">
 <meta property="og:description" content="مدير التسويق الرقمي · التسويق الصحي · الدمام">
-<meta property="og:image" content="https://ahmedalmaamari.github.io/ahmed.webp">
+<meta property="og:image" content="https://ahmedalmaamari.github.io/og-card.jpg">
 <title>أحمد المعمري</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@600;700;800&display=swap">
 <style>
@@ -53,10 +56,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .btn-solid{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .btn:hover{border-color:var(--accent)}
 
-.portrait{position:relative;aspect-ratio:1/1;max-width:100%;margin:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px -18px rgb(20 35 58 / .25)}
+.portrait{position:relative;aspect-ratio:4/5;max-width:100%;margin:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px -18px rgb(20 35 58 / .25)}
 .portrait .card{position:absolute;inset:0;background:linear-gradient(170deg,#eef3f7 0%,#dcebe6 100%)}
 .portrait .cut{position:absolute;inset:0}
-.portrait img{position:absolute;inset-inline:0;bottom:0;width:100%;height:96%;object-fit:contain;object-position:bottom}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
 
 /* numbers */
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
@@ -80,7 +83,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .focus li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
 
 /* achievements */
-.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .case{background:var(--card);border:1px solid var(--line);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;min-width:0}
 .case-hd{padding:20px 20px 6px;display:flex;flex-direction:column;gap:6px}
 .case-tag{font-size:13px;font-weight:600;color:var(--accent)}
@@ -108,6 +111,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .scale .pt.a{background:var(--accent)}
 .scale .tk{position:absolute;top:28px;left:var(--x);transform:translateX(-50%);font-size:12px;color:var(--muted)}
 .cap{font-size:13px;color:var(--muted)}
+.adstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.adstats div{border:1px solid var(--line);border-radius:12px;padding:10px 8px;background:var(--page);display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px}
+.adstats b{font-size:18px;color:var(--ink)}
+.adstats span{font-size:12px;color:var(--muted);line-height:1.4}
 .venues{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .venues div{border:1px solid var(--line);border-radius:12px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;font-size:13px;line-height:1.45;background:var(--page);color:var(--ink)}
 .venues svg{width:26px;height:26px;color:var(--accent)}
@@ -156,7 +163,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .reach-row .btn{padding:8px 12px;font-size:13px;flex:none}
 .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:14px;padding-top:24px}
 
-@media (max-width:900px){.cases{grid-template-columns:1fr}.nav{display:none}}
+@media (max-width:760px){.cases{grid-template-columns:1fr}}
+@media (max-width:900px){.nav{display:none}}
 @media (max-width:760px){
   body{font-size:16px}
   .hero{grid-template-columns:1fr}
@@ -215,7 +223,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
     </div>
     <figure class="portrait">
       <div class="card"></div>
-            <div class="cut"><img src="ahmed.webp" alt="أحمد المعمري" width="617" height="620"></div>
+            <div class="cut"><img src="ahmed-suit.jpg" alt="أحمد المعمري" width="800" height="996"></div>
     </figure>
   </section>
 
@@ -251,6 +259,26 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
       <p><span class="ar">كل إنجاز في ثلاث خطوات: الوضع قبل، ما قمت به، والنتيجة.</span><span class="en">Each achievement in three steps: where it started, what I did, and the result.</span></p>
     </div>
     <div class="cases">
+
+      <article class="case">
+        <div class="case-hd">
+          <span class="case-tag"><span class="ar">الإعلانات المدفوعة</span><span class="en">Paid search</span></span>
+          <h3><span class="ar">حملات بحث Google لأقسام المستشفى</span><span class="en">Google Search campaigns for hospital departments</span></h3>
+        </div>
+        <div class="fig">
+          <span class="big num" data-to="48" data-from="0" data-suffix="K+">48K+</span>
+          <div class="adstats">
+            <div><b class="num">2.38M</b><span><span class="ar">مرة ظهور</span><span class="en">Impressions</span></span></div>
+            <div><b class="num">139K</b><span><span class="ar">نقرة</span><span class="en">Clicks</span></span></div>
+            <div><b class="num">11.56%</b><span><span class="ar">نسبة النقر لأفضل إعلان</span><span class="en">Best ad CTR</span></span></div>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step"><i>1</i><b><span class="ar">النطاق</span><span class="en">Scope</span></b><p><span class="ar">حملات بحث لطوارئ الأطفال، وقسم الأطفال، وصحة الرجل، والعيادات، وحملة عامة للمستشفى.</span><span class="en">Search campaigns for pediatric ER, pediatrics, men's health, clinics, and a general hospital campaign.</span></p></div>
+          <div class="step"><i>2</i><b><span class="ar">ما قمت به</span><span class="en">What I did</span></b><p><span class="ar">بنيت الحملات والكلمات المفتاحية لكل قسم، وصفحة هبوط متوافقة مع سياسات Google لإعلانات الرعاية الصحية، وتابعت الأداء والتحسين.</span><span class="en">Built campaigns and keywords per department, a landing page compliant with Google's healthcare ad policies, and ran ongoing optimization.</span></p></div>
+          <div class="step res"><i>✓</i><b><span class="ar">النتيجة</span><span class="en">Result</span></b><p><span class="ar">أكثر من <strong class="num">48K</strong> إحالة ناجحة (تحويل) خلال 12 شهرًا.</span><span class="en">More than <strong class="num">48K</strong> conversions in 12 months.</span></p></div>
+        </div>
+      </article>
 
       <article class="case">
         <div class="case-hd">
@@ -357,7 +385,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         <span class="when"><span class="ar">أبريل 2025 – الآن</span><span class="en">Apr 2025 – Present</span></span>
         <ul>
           <li><span class="ar">أضع الخطة التسويقية وتقويم الحملات، وأعرض الخطط والنتائج النصف سنوية على الرئيس التنفيذي.</span><span class="en">Build the marketing plan and campaign calendar; present half-year plans and results to the CEO.</span></li>
-          <li><span class="ar">أدير الحملات المدفوعة على بحث Google و Meta و Snapchat لعدة أقسام طبية.</span><span class="en">Run paid campaigns on Google Search, Meta and Snapchat for several clinical departments.</span></li>
+          <li><span class="ar">أدير الحملات المدفوعة على بحث Google و Meta و Snapchat لعدة أقسام طبية، وحققت حملات البحث أكثر من 48 ألف تحويل خلال 12 شهرًا.</span><span class="en">Run paid campaigns on Google Search, Meta and Snapchat for several clinical departments; search campaigns drove 48K+ conversions in 12 months.</span></li>
           <li><span class="ar">نمّيت المتابعين من 26 ألف إلى أكثر من 50 ألف على 8 منصات، ورفعت تقييم Google من 4.1 إلى 4.3.</span><span class="en">Grew followers from 26K to 50K+ across 8 platforms and raised the Google rating from 4.1 to 4.3.</span></li>
           <li><span class="ar">أدير أكثر من 90 فعالية صحية وتوعوية ومجتمعية.</span><span class="en">Run 90+ health awareness and community events.</span></li>
         </ul>
