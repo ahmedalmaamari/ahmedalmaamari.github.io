@@ -2,6 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316325c'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='26' fill='%23ffffff'%3EAM%3C/text%3E%3Crect x='18' y='48' width='28' height='4' rx='2' fill='%232fbf98'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#16325c">
+
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="أحمد المعمري، مدير التسويق الرقمي في مستشفى تداوي العام بالدمام. Ahmed Almaamari, Digital Marketing Manager.">
 <meta property="og:title" content="أحمد المعمري | Ahmed Almaamari">
@@ -166,6 +169,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   .job .when{grid-column:1;grid-row:auto;justify-self:start;margin-bottom:6px;order:-1}
 }
 @media (prefers-reduced-motion:no-preference){.bar i{animation:grow 1s cubic-bezier(.2,.7,.2,1) both}@keyframes grow{from{width:0}}}
+
+/* reveal on scroll: only when JS opts in, so content stays visible without it */
+.reveal-on .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal-on .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal-on .rv{opacity:1;transform:none;transition:none}}
 </style>
 
 </head>
@@ -490,6 +498,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   }
   var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){io.unobserve(en.target);run(en.target)}})},{threshold:.6});
   els.forEach(function(el){io.observe(el)});
+})();
+</script>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var items=[].slice.call(document.querySelectorAll('.kpi,.sec-head,.box,.case,.area,.job,.ed,.contact'));
+  document.documentElement.classList.add('reveal-on');
+  items.forEach(function(el){el.classList.add('rv')});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  items.forEach(function(el,i){el.style.transitionDelay=(el.classList.contains('kpi')||el.classList.contains('case')||el.classList.contains('area')||el.classList.contains('ed')?(i%4)*80:0)+'ms';io.observe(el)});
+  setTimeout(function(){items.forEach(function(el){el.classList.add('in')})},4000);
 })();
 </script>
 </body>
